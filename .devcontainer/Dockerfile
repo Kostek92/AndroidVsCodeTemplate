@@ -37,3 +37,8 @@ RUN rm -f /etc/apt/sources.list.d/yarn.list \
 
 USER vscode
 WORKDIR /workspaces
+
+# opencode CLI for in-container AI sessions (always latest release).
+# --no-modify-path: don't touch shell rc files; PATH is set via ENV below.
+RUN curl -fsSL https://opencode.ai/install | bash -s -- --no-modify-path
+ENV PATH="/home/vscode/.opencode/bin:${PATH}"
