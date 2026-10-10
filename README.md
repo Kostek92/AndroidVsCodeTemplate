@@ -50,6 +50,18 @@ code MyNewApp
 
 Reopen in container, connect your phone, and build. That's it.
 
+## Code formatting
+
+Kotlin is autoformatted with [ktlint](https://pinterest.github.io/ktlint/):
+
+```bash
+./gradlew ktlintFormat   # rewrite files to match the style
+./gradlew ktlintCheck    # verify without changing files
+```
+
+VS Code formats Kotlin on save too (see `.vscode/settings.json`). Both use
+the shared rules in `.editorconfig`.
+
 ## Notes
 
 - There is no emulator in the container — a physical phone is the way to

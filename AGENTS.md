@@ -22,6 +22,10 @@ template — real apps start via GitHub "Use this template", then get renamed
 - `./gradlew assembleDebug` — build. APK lands in
   `app/build/outputs/apk/debug/app-debug.apk`.
 - `./gradlew installDebug` — install to the connected phone.
+- `./gradlew ktlintFormat` — autoformat Kotlin (`app/`, incl. build scripts
+  under the module). `./gradlew ktlintCheck` verifies; it is wired into
+  `check`. Style lives in `.editorconfig` (ktlint code style
+  `ktlint_official`) and is read by both ktlint and the editor.
 - `scripts/adb-wireless pair|connect|devices` — WiFi debugging (Android 11+).
   Pair once per phone; `connect` each session.
 - No unit tests yet. Verification = successful build + install + launch on

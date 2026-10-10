@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
+    id("org.jlleitschuh.gradle.ktlint")
 }
 
 android {
@@ -31,6 +32,10 @@ android {
     buildFeatures {
         compose = true
     }
+}
+
+ktlint {
+    version.set("1.2.1")
 }
 
 dependencies {
